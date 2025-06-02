@@ -4,6 +4,17 @@
   padding: 2rem;
   text-align: center;
 }
+body {
+  background: linear-gradient(to right, #754b3d 50%, #466780 50%);
+  font-family: 'Inter', sans-serif;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
 
 .cards-container {
   display: flex;
@@ -13,3 +24,4 @@
   flex-wrap: nowrap;
   gap: 40px; 
 }
+

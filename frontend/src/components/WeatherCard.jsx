@@ -9,7 +9,7 @@ const WeatherCard = ({ title, temperature, wind, pressure, color, sol }) => {
         {sol ? `Mars Weather (Sol ${sol})` : title}
       </h2>
       <p className="icon">
-        <Icon icon={Icons.tempature} width="50" />
+        <Icon icon={Icons.temperature} width="50" />
         <strong>Temperature:</strong> {temperature}
       </p>
       <p className="icon">

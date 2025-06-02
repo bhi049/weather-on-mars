@@ -1,0 +1,39 @@
+.hero-header {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  z-index: 10;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.planet-icon {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+  animation: spin 10s linear infinite;
+  transition: transform 0.2s ease;
+}

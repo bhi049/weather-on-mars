@@ -3,6 +3,7 @@ import { getEarthWeather } from "./services/earthAPI";
 import { getMarsWeather } from "./services/marsAPI";
 import WeatherCard from "./components/WeatherCard";
 import "./App.css";
+import HeroHeader from "./components/HeroHeader";
 
 function App() {
   const [mars, setMars] = useState(null);
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Mars And Earth Weather</h1>
+      <HeroHeader />
       <div className="cards-container">
         {mars && (
           <WeatherCard
@@ -45,8 +46,7 @@ function App() {
         )}
       </div>
     </div>
-
   );
 }
 
-export default App
+export default App;
