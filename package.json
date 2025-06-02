@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@iconify/icons-fluent": "^1.2.38",
+    "@iconify/icons-mdi": "^1.2.48",
+    "@iconify/icons-meteocons": "^1.2.0",
+    "@iconify/react": "^6.0.0"
+  }
+}

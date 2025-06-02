@@ -1,0 +1,21 @@
+.weather-card {
+  min-width: 300px;
+  max-width: 400px;
+  font-size: 1.1rem;
+  background: linear-gradient(145deg, #181818, #1e1e1e);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: scale(1.02);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
