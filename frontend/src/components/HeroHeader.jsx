@@ -1,7 +1,10 @@
 import "../styles/HeroHeader.css";
 import { PlanetIcons } from "../icons/icons";
+import CurrentDate from "./CurrentDate";
+
 
 const HeroHeader = ( {inputCity, setInputCity, setSearchedCity} ) => {
+
   return (
     <header className="hero-header">
       <h1 className="hero-title">
@@ -20,6 +23,7 @@ const HeroHeader = ( {inputCity, setInputCity, setSearchedCity} ) => {
       <p className="hero-subtitle">
         Compare real-time weather between Earth and the Red Planet.
       </p>
+      <CurrentDate />
 
       <div className="city-input-row">
         <label htmlFor="city">Search City: </label>
