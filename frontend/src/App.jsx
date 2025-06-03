@@ -8,22 +8,29 @@ import HeroHeader from "./components/HeroHeader";
 function App() {
   const [mars, setMars] = useState(null);
   const [earth, setEarth] = useState(null);
+  const [inputCity, setInputCity] = useState("Helsinki");
+  const [searchedCity, setSearchedCity] = useState("Helsinki");
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchMarsWeather = async () => {
       const marsData = await getMarsWeather();
       const sol = marsData.sol_keys[0];
       setMars({ ...marsData[sol], sol });
-
-      const earthData = await getEarthWeather("Helsinki");
-      setEarth(earthData);
     };
-    fetchData();
+    fetchMarsWeather();
   }, []);
+
+  useEffect(() => {
+    const fetchEarthWeather = async () => {
+      const data = await getEarthWeather(searchedCity);
+      setEarth(data);
+    };
+    fetchEarthWeather();
+  }, [searchedCity]);
 
   return (
     <div className="app-container">
-      <HeroHeader />
+      <HeroHeader inputCity={inputCity} setInputCity={setInputCity} setSearchedCity={setSearchedCity} />
       <div className="cards-container">
         {mars && (
           <WeatherCard
@@ -37,7 +44,7 @@ function App() {
 
         {earth && (
           <WeatherCard
-            title={`Earth Weather (Helsinki)`}
+            title={`Earth Weather (${searchedCity})`}
             temperature={`${earth.main?.temp} °C`}
             wind={`${earth.wind?.speed} m/s`}
             pressure={`${earth.main?.pressure} hPa`}
