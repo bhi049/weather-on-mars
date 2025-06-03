@@ -5,8 +5,8 @@
   text-align: center;
 }
 body {
-  background: linear-gradient(to right, #754b3d 50%, #466780 50%);
-  font-family: 'Inter', sans-serif;
+  background:
+    linear-gradient(to right, #3a221a 0%, #163046 100%);
 }
 
 .subtext {
