@@ -3,7 +3,9 @@ import { getEarthWeather } from "./services/earthAPI";
 import { getMarsWeather } from "./services/marsAPI";
 import WeatherCard from "./components/WeatherCard";
 import "./App.css";
+import Navbar from "./components/Navbar";
 import HeroHeader from "./components/HeroHeader";
+import FunFacts from "./components/FunFacts";
 
 function App() {
   const [mars, setMars] = useState(null);
@@ -30,6 +32,8 @@ function App() {
 
   return (
     <div className="app-container">
+      <Navbar />
+      <section id="weather">
       <HeroHeader inputCity={inputCity} setInputCity={setInputCity} setSearchedCity={setSearchedCity} />
       <div className="cards-container">
         {mars && (
@@ -51,7 +55,12 @@ function App() {
             color="#00BFFF"
           />
         )}
+        
       </div>
+      </section>
+      <section id="fun-facts">
+        <FunFacts />
+      </section>
     </div>
   );
 }

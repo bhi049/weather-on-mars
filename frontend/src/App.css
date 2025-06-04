@@ -4,6 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background:
     linear-gradient(to right, #3a221a 0%, #163046 100%);

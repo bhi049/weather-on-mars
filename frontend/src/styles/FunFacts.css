@@ -1,0 +1,75 @@
+.fun-facts-section {
+  padding: 4rem 2rem;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.planet-facts-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.planet-box {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.planet-box:hover {
+  transform: scale(1.03);
+}
+
+.planet-box h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.planet-icon-facts {
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: auto;
+  animation: rotatePlanet 6s linear infinite;
+}
+
+.planet-box ul {
+  padding-left: 1.2rem;
+  list-style: none;
+}
+
+.planet-box li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.mars {
+  border-top: 4px solid #ff4500;
+}
+
+.earth {
+  border-top: 4px solid #00bfff;
+}
+
+@keyframes rotatePlanet {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
