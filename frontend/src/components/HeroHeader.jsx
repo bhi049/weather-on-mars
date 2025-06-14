@@ -1,11 +1,13 @@
 import "../styles/HeroHeader.css";
 import { PlanetIcons } from "../icons/icons";
 import CurrentDate from "./CurrentDate";
+import MotionWrapper from "./MotionWrapper";
 
 
 const HeroHeader = ( {inputCity, setInputCity, setSearchedCity} ) => {
 
   return (
+    <MotionWrapper delay={0.2}>
     <header className="hero-header">
       <h1 className="hero-title">
         <img
@@ -42,6 +44,7 @@ const HeroHeader = ( {inputCity, setInputCity, setSearchedCity} ) => {
         </button>
       </div>
     </header>
+    </MotionWrapper>
   );
 };
 

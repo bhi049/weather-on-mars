@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import HeroHeader from "./components/HeroHeader";
 import PlanetComparison from "./components/PlanetComparison";
 import FunFacts from "./components/FunFacts";
+import MotionWrapper from "./components/MotionWrapper";
 
 function App() {
   const [mars, setMars] = useState(null);
@@ -38,16 +39,20 @@ function App() {
       <HeroHeader inputCity={inputCity} setInputCity={setInputCity} setSearchedCity={setSearchedCity} />
       <div className="cards-container">
         {mars && (
-          <WeatherCard
-            temperature={`${mars.AT?.av} °C`}
-            wind={`${mars.HWS?.av} m/s`}
-            pressure={`${mars.PRE?.av} Pa`}
-            color="#FF4500"
-            sol={mars.sol}
-          />
+          <MotionWrapper delay={0.1}>
+            <WeatherCard
+              title={`Mars Weather (Sol ${mars.sol})`}
+              temperature={`${mars.AT?.av} °C`}
+              wind={`${mars.HWS?.av} m/s`}
+              pressure={`${mars.PRE?.av} Pa`}
+              color="#FF4500"
+              sol={mars.sol}
+            />
+          </MotionWrapper>
         )}
 
         {earth && (
+          <MotionWrapper delay ={0.2}>
           <WeatherCard
             title={`Earth Weather (${searchedCity})`}
             temperature={`${earth.main?.temp} °C`}
@@ -55,6 +60,7 @@ function App() {
             pressure={`${earth.main?.pressure} hPa`}
             color="#00BFFF"
           />
+          </MotionWrapper>
         )}
         
       </div>

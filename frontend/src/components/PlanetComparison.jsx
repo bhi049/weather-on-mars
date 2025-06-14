@@ -1,4 +1,5 @@
 import "../styles/PlanetComparison.css";
+import MotionWrapper from "./MotionWrapper";
 
 const PlanetComparison = () => {
   const data = [
@@ -9,6 +10,7 @@ const PlanetComparison = () => {
   ];
 
   return (
+    <MotionWrapper delay={0.2}>
     <div className="comparison-section">
       <h2 className="comparison-title">Comparison</h2>
       <table className="comparison-table">
@@ -30,6 +32,7 @@ const PlanetComparison = () => {
         </tbody>
       </table>
     </div>
+</MotionWrapper>
   );
 };
 

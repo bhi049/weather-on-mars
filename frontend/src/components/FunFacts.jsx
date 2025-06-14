@@ -1,6 +1,7 @@
 import "../styles/FunFacts.css";
 import MarsIcon from "../assets/Mars.png";
 import EarthIcon from "../assets/Earth.png";
+import MotionWrapper from "./MotionWrapper";
 
 const marsFacts = [
   "A day on Mars is called a 'sol'.",
@@ -18,6 +19,7 @@ const earthFacts = [
 
 const FunFacts = () => {
   return (
+    <MotionWrapper delay={0.2}>
     <section id="facts" className="fun-facts-section">
       <h2 className="section-title">Fun Facts</h2>
 
@@ -45,6 +47,7 @@ const FunFacts = () => {
         </div>
       </div>
     </section>
+    </MotionWrapper>
   );
 };
 
