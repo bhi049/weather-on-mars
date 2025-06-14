@@ -3,7 +3,6 @@ import { PlanetIcons } from "../icons/icons";
 import CurrentDate from "./CurrentDate";
 import MotionWrapper from "./MotionWrapper";
 
-
 const HeroHeader = ( {inputCity, setInputCity, setSearchedCity} ) => {
 
   return (
