@@ -5,6 +5,7 @@ import WeatherCard from "./components/WeatherCard";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import HeroHeader from "./components/HeroHeader";
+import PlanetComparison from "./components/PlanetComparison";
 import FunFacts from "./components/FunFacts";
 
 function App() {
@@ -57,6 +58,10 @@ function App() {
         )}
         
       </div>
+      <section id="planet-comparison">
+        <PlanetComparison />
+      </section>
+
       </section>
       <section id="fun-facts">
         <FunFacts />

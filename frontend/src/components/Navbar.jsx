@@ -5,6 +5,7 @@ const Navbar = () => {
     <nav className="navbar">
       <ul>
         <li><a href="#weather">Weather</a></li>
+        <li><a href="#planet-comparison">Comparison</a></li>
         <li><a href="#fun-facts">Fun Facts</a></li>
       </ul>
     </nav>
